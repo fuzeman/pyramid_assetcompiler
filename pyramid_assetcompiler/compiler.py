@@ -122,7 +122,7 @@ class Compiler(object):
         """
         Runs the compiler for the initialized asset.
         """
-        cmd = '%s %s' % (self.compiler['cmd'], self.fullpath)
+        cmd = '%s "%s"' % (self.compiler['cmd'], self.fullpath)
         
         proc = subprocess.Popen(
             shlex.split(cmd),
